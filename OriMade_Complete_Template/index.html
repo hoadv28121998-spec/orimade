@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OriMade Gift Shop</title>
+<meta name="description" content="OriMade Gift Shop - những món quà nhỏ dành cho những người đặc biệt.">
+<style>
+:root{
+  --pink:#f48ba5;
+  --pink-light:#fff0f4;
+  --pink-soft:#fde1e8;
+  --cream:#fffaf8;
+  --text:#5a4248;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{max-width:1120px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,250,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid #f6dce3}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;letter-spacing:2px;color:var(--pink);font-size:21px}
+nav{display:flex;gap:22px;font-size:14px}
+nav a:hover{color:var(--pink)}
+.hero{padding:70px 0 55px;background:linear-gradient(135deg,#fff8fa,#fde1e8)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:.95;margin:0 0 18px;color:var(--pink);letter-spacing:-2px}
+.hero h2{font-size:24px;margin:0 0 14px;font-weight:600}
+.hero p{max-width:560px;font-size:17px;color:#765d64}
+.btn{display:inline-block;background:var(--pink);color:white;padding:13px 22px;border-radius:999px;font-weight:700;margin-top:12px;box-shadow:0 8px 20px rgba(244,139,165,.25)}
+.btn.secondary{background:white;color:var(--pink);border:1px solid var(--pink);margin-left:8px}
+.logo-card{background:white;border-radius:28px;padding:18px;box-shadow:0 20px 50px rgba(120,60,80,.12)}
+.logo-card img{display:block;width:100%;max-height:420px;object-fit:contain;border-radius:20px}
+section{padding:70px 0}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{margin:0;font-size:32px;color:var(--text)}
+.section-title p{margin:7px 0;color:#8a6e76}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.category{background:white;border:1px solid #f4dce3;border-radius:22px;padding:28px 18px;text-align:center;transition:.2s}
+.category:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(120,60,80,.08)}
+.category .icon{font-size:34px}
+.category h3{margin:10px 0 4px}
+.category p{margin:0;color:#8a6e76;font-size:14px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:#fff;border-radius:22px;overflow:hidden;border:1px solid #f4dce3}
+.product .photo{height:210px;background:var(--pink-light);display:flex;align-items:center;justify-content:center;font-size:55px}
+.product .info{padding:17px}
+.product h3{font-size:17px;margin:0 0 5px}
+.price{color:var(--pink);font-weight:800;font-size:18px}
+.order{background:var(--pink);color:white}
+.order-box{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.order h2{margin:0;font-size:32px}
+.order p{margin:7px 0 0;opacity:.9}
+.order .btn{background:white;color:var(--pink);box-shadow:none}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-card{background:white;border-radius:25px;padding:30px;border:1px solid #f4dce3}
+.about ul{padding-left:20px}
+footer{padding:35px 0;background:#5a4248;color:#fff;text-align:center}
+footer p{margin:4px 0;opacity:.85}
+@media(max-width:800px){
+  .hero-grid,.about{grid-template-columns:1fr}
+  .categories{grid-template-columns:repeat(2,1fr)}
+  .products{grid-template-columns:repeat(2,1fr)}
+  nav{display:none}
+  .order-box{display:block;text-align:center}
+  .order .btn{margin-top:18px}
+}
+@media(max-width:480px){
+  .categories,.products{grid-template-columns:1fr 1fr;gap:10px}
+  .product .photo{height:150px}
+  .hero{padding-top:45px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">ORI MADE</a>
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#categories">Danh mục</a>
+      <a href="#products">Sản phẩm</a>
+      <a href="#about">Về OriMade</a>
+      <a href="#order">Đặt hàng</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <h1>OriMade</h1>
+      <h2>Gift Shop</h2>
+      <p>Những món quà nhỏ dành cho những người đặc biệt. Một góc nhỏ xinh để bạn tìm thấy món quà thật đáng yêu.</p>
+      <a class="btn" href="#products">Xem sản phẩm</a>
+      <a class="btn secondary" href="#order">Đặt hàng</a>
+    </div>
+    <div class="logo-card">
+      <img src="orimade-logo.jpg" alt="OriMade Gift Shop">
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="section-title">
+      <h2>Khám phá OriMade</h2>
+      <p>Chọn một danh mục bạn yêu thích</p>
+    </div>
+    <div class="categories">
+      <div class="category"><div class="icon">🎁</div><h3>Quà tặng</h3><p>Những món quà xinh xắn</p></div>
+      <div class="category"><div class="icon">🎀</div><h3>Phụ kiện</h3><p>Nhỏ xinh, dễ phối</p></div>
+      <div class="category"><div class="icon">🌷</div><h3>Handmade</h3><p>Mang dấu ấn riêng</p></div>
+      <div class="category"><div class="icon">🧸</div><h3>Trang trí</h3><p>Làm không gian đáng yêu hơn</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" style="background:#fff;">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sản phẩm nổi bật</h2>
+      <p>Bạn có thể thay toàn bộ tên, ảnh và giá ở phần này.</p>
+    </div>
+    <div class="products">
+      <article class="product"><div class="photo">🎀</div><div class="info"><h3>Kẹp tóc nơ</h3><div class="price">39.000đ</div></div></article>
+      <article class="product"><div class="photo">🌸</div><div class="info"><h3>Cột tóc hoa</h3><div class="price">29.000đ</div></div></article>
+      <article class="product"><div class="photo">🧸</div><div class="info"><h3>Móc khóa dễ thương</h3><div class="price">49.000đ</div></div></article>
+      <article class="product"><div class="photo">🎁</div><div class="info"><h3>Set quà nhỏ</h3><div class="price">79.000đ</div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:15px">
+        <h2>Về OriMade</h2>
+        <p>Một tiệm quà nhỏ, nhiều điều dễ thương.</p>
+      </div>
+      <p>OriMade hướng đến những món quà và phụ kiện xinh xắn, dễ chọn và phù hợp để tặng người thân, bạn bè hoặc tự thưởng cho chính mình.</p>
+    </div>
+    <div class="about-card">
+      <h3>💗 Vì sao chọn OriMade?</h3>
+      <ul>
+        <li>Mẫu mã đáng yêu, dễ lựa chọn</li>
+        <li>Đóng gói chỉn chu</li>
+        <li>Hỗ trợ tư vấn trước khi đặt</li>
+        <li>Cập nhật sản phẩm mới thường xuyên</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="container order-box">
+    <div>
+      <h2>Sẵn sàng chọn quà?</h2>
+      <p>Bấm đặt hàng để gửi thông tin cho OriMade.</p>
+    </div>
+    <a class="btn" href="https://forms.google.com/" target="_blank" rel="noopener">ĐẶT HÀNG NGAY</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>ORI MADE — GIFT SHOP</strong>
+    <p>TikTok · Facebook · Zalo</p>
+    <p>© 2026 OriMade. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
